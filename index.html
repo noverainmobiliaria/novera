@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novera Inmobiliaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.css" />
+  <style>
+    :root {
+      --dorado: #D4AF37;
+      --gris-oscuro: #1C1C1C;
+      --gris-medio: #3C3C3C;
+      --blanco: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Forum', serif;
+    }
+
+    body {
+      color: var(--gris-oscuro);
+    }
+
+    .section {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero {
+      position: relative;
+      background: url('sala A.png') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blanco);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      z-index: 2;
+    }
+
+    .logo {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      height: 60px;
+      z-index: 3;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: var(--blanco);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      border-bottom: 1px solid var(--gris-medio);
+    }
+
+    nav a {
+      color: var(--gris-oscuro);
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--blanco);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      padding: 12px 16px;
+      display: block;
+      color: var(--gris-oscuro);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h2 {
+      color: var(--dorado);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .propiedades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .propiedad {
+      border: 1px solid var(--gris-medio);
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: var(--blanco);
+    }
+
+    footer {
+      background-color: var(--gris-medio);
+      color: var(--blanco);
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <div class="dropdown">
+      <a href="#">Propiedades</a>
+      <div class="dropdown-content">
+        <a href="#casas">Casas</a>
+        <a href="#apartamentos">Apartamentos</a>
+        <a href="#oficinas">Oficinas/Clínicas</a>
+        <a href="#terrenos">Terrenos</a>
+      </div>
+    </div>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div id="fullpage">
+    <div class="section hero" id="inicio">
+      <img src="Logotipo para Inmobiliaria Elegante Moderno y Minimalista Verde Oscuro y Gris Claro.jpg" alt="Logo Novera" class="logo">
+      <h1>Buscamos espacios con esencia</h1>
+    </div>
+
+    <div class="section" id="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>Novera es una inmobiliaria boutique que selecciona cuidadosamente cada propiedad por su diseño, ubicación y carácter único. Creemos en crear vínculos auténticos entre las personas y los espacios.</p>
+    </div>
+
+    <div class="section" id="apartamentos">
+      <h2>Apartamentos</h2>
+      <div class="propiedades-grid">
+        <div class="propiedad">Proyecto Giardino – Tipo A</div>
+        <div class="propiedad">Proyecto Giardino – Tipo B</div>
+      </div>
+    </div>
+
+    <div class="section" id="terrenos">
+      <h2>Terrenos</h2>
+      <div class="propiedades-grid">
+        <div class="propiedad">Terreno en Carretera a El Salvador</div>
+      </div>
+    </div>
+
+    <div class="section" id="oficinas">
+      <h2>Oficinas / Clínicas</h2>
+      <div class="propiedades-grid">
+        <div class="propiedad">Oficina en Zona 14</div>
+      </div>
+    </div>
+
+    <div class="section" id="casas">
+      <h2>Casas</h2>
+      <div class="propiedades-grid">
+        <div class="propiedad">Casa en Hacienda Madeira</div>
+      </div>
+    </div>
+
+    <div class="section" id="contacto">
+      <h2>Contacto</h2>
+      <p>Síguenos en nuestras redes:</p>
+      <ul>
+        <li><a href="https://www.instagram.com/novera.gt" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/noveragt" target="_blank">Facebook</a></li>
+        <li><a href="mailto:contacto@novera.gt">contacto@novera.gt</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <footer>
+        <p>&copy; 2025 Novera Inmobiliaria. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      autoScrolling: true,
+      navigation: true,
+      anchors: ['inicio', 'nosotros', 'apartamentos', 'terrenos', 'oficinas', 'casas', 'contacto']
+    });
+  </script>
+</body>
+</html>
